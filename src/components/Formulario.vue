@@ -5,6 +5,7 @@ import Temporizador from './Temporizador.vue';
 
 export default defineComponent({
     name: 'Formulario',
+    emits:['aoSalvarTarefa'],
     components:{
         Temporizador
     },
@@ -15,10 +16,12 @@ export default defineComponent({
     },
     methods:{
         finalizarTarefa (tempoDecorrido: number) : void{
-            console.log('tempo da tarefa:',tempoDecorrido)
-            console.log('descricao:',this.descricao)
-            this.descricao = ''
-        }
+            this.$emit('aoSalvarTarefa',{
+                duracaoEmSegundos: tempoDecorrido,
+                descricao: this.descricao
+            })
+        },
+
     }
 })
 </script>
@@ -35,3 +38,17 @@ export default defineComponent({
         </div>
     </div>
 </template>
+
+<style scoped>
+    .box{
+        background-color: #7B2383;
+        border-radius: 0 0 10px 10px;
+    }
+    .input{
+        background-color: #ffffff;
+        color:black
+    }
+    .input::placeholder{
+        color: black;
+    }
+</style>
