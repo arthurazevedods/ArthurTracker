@@ -21,7 +21,7 @@
     <div class="box has-text-weight-bold">
         <div class="columns">
             <div class="column is-7">
-                {{ tarefa.descricao }}
+                {{ tarefa.descricao || "Tarefa sem descrição"}}
             </div>
             <div class="column">
                 <Cronometro :tempoEmSegundos="tarefa.duracaoEmSegundos"/>
@@ -33,7 +33,7 @@
 
 <style scoped>
     .box{
-        background-color: #3186CD;
+        background-color: #7B2383;
     }
     .column{
         color: #ffffff;
