@@ -35,6 +35,6 @@
 <style scoped>
     
     .column{
-        color: #ffffff;
+        color: var(--texto-primario)
     }
 </style>

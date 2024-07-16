@@ -16,5 +16,6 @@
 <style scoped>
     .box{
         background-color: #3186CD;/* 7B2383 */
+        color:var(--texto-primario);
     }
 </style>

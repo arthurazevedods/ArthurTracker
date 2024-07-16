@@ -27,7 +27,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <div class="box">
+    <div class="box formulario">
         <div class="columns">
             <div class="column is-8" role="form" aria-label="Formulário para criação de uma nova tarefa">
                 <input type="text" class="input" placeholder="Qual tarefa deseja iniciar?" v-model="descricao"/>
@@ -40,9 +40,14 @@ export default defineComponent({
 </template>
 
 <style scoped>
-    .box{
-        background-color: #7B2383;
+    .formulario{
+        color: var(--texto-primario);
+        background-color: var(--bg-secundario);
         border-radius: 0 0 10px 10px;
+    }
+    .formulario.modo-escuro{
+        color: var(--texto-primario);
+        background-color: var(--bg-secundario);
     }
     .input{
         background-color: #ffffff;
