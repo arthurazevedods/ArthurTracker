@@ -30,7 +30,7 @@
 <template>
     <header>
         <h1>
-            <img src="../assets/Logo.png" alt="Logo da Alura Tracker">
+            <img src="../assets/logo.png" alt="Logo da Alura Tracker">
         </h1>
         <button class="button" @click="alterarTema">
           {{ textoBotao }}
